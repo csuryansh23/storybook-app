@@ -10,4 +10,4 @@ router.get('/google/callback',
     res.redirect('/dashboard');
   });
   
-module.exports = router; 
+module.exports = router;  
