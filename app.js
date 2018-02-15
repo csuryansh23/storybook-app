@@ -10,7 +10,7 @@ const app = express();
 app.get('/',(req,res)=>{
     res.send('It works!');
 });
-
+ 
 app.use('/auth',auth);
 
 const port = process.env.PORT || 5000 ;
