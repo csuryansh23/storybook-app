@@ -16,8 +16,12 @@ body {
       margin-top:20px;
   }
 
+  #cc{
+      color: rgb(224, 187, 20);
+  }
+
   .story-text{
-      height: 100px;
+      height: 80px;
   }
 
   .dash-status{ 
@@ -26,4 +30,8 @@ body {
 
   #delete-form{
       display: inline;
+  }
+
+  #cf{
+      font-family:Bradley Hand,cursive;
   }
