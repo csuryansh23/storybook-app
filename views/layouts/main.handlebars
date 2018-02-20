@@ -45,10 +45,20 @@
         <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
         <script>
             $(document).ready(()=>{
-                $('.button-collapse').sideNav();
                 $('select').material_select();
             }); 
 
+             $('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    }
+  );
              //any text area with name body will be replaced by ckeditor
             CKEDITOR.replace('body',{
                 plugins:'wysiwygarea,toolbar,basicstyles,link'

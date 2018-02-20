@@ -1,43 +1,52 @@
 <nav class=" blue-grey darken-3">
     <div class="container">
-      <div class="nav-wrapper">
-          <a href="/" class="brand-logo
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo
            center">YourStory</a>
-           <a href="#" data-activates="main-menu" class="button-collapse show-on-large"><i class="fa fa-bars"></i></a>
-           <!--RIGHT NAV -->
-           <ul class="right hide-on-small-only">
-               {{#if user}}
-                    <li><a href="/dashboard">Welcome,
-                   <span style="color:rgb(91, 204, 63)">{{user.firstName}}</span></a></li>
-                    <li><a href="/auth/logout"><span style="color:rgb(236, 205, 65)"><i class="fa fa-sign-out">
-                    </i> Logout</span></a></li>
-               {{else}}
-                <li><a href="/stories"><i class="fa fa-book">
-                </i> Public Stories</a></li>
-               {{/if}}
-            </ul>
-            <!-- SIDE MENU -->
-            <ul class="side-nav" id="main-menu">
+        {{#if user}}
+        <!--Dropdown Trigger-->
+        <div 
+            class='dropdown-button  grey lighten-4 btn-flat ' 
+            href='#' 
+            data-beloworigin="true" 
+            hover="true" 
+            data-activates='dropdown1' 
+            style=" width: 50px; height: 40px; align-items: center;
+            margin: 0; 
+            padding: 0;"
+        >
+            <i class="material-icons" style=" margin: 0; position: absolute; top: 0; margin-left: 15px; margin-top: 2px;  font-size: 20px;color:grey lighten-4" >dehaze</i>
+       </div>
+ 
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="/stories" style="color:black"><i class="fa fa-book"></i>Public Stories</a></li>
+        <li class="divider"></li>
+        <li><a href="/dashboard" style="color:black"><i class="fa fa-user"></i>Dashboard</a></li>
+        </ul> 
+        {{/if}}
+         
+
+                <!--RIGHT NAV -->
+                <ul class="right hide-on-small-only">
                     {{#if user}}
+                    <li>
+                        <a href="/dashboard">Welcome, {{user.firstName}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/auth/logout">
+                            <i class="fa fa-sign-out">
+                            </i> Logout</a>
+                    </li>
                     {{else}}
                     <li>
-                     <a class = "btn red darken-1" href="/auth/google">
-                     <i class="fa fa-google left"></i> Login Here</a>
+                        <a href="/stories">
+                            <i class="fa fa-book">
+                            </i> Public Stories</a>
                     </li>
                     {{/if}}
-                    <li ><a href="/stories"><i class="fa fa-book"></i>
-                    Public Stories</a></li>
-                    {{#if user}}
-                    <li class="divider"></li>
-                    <li><a href="/dashboard"><i class="fa fa-cog"></i>
-                    Dashboard</a></li>
-                    <li><a href="/stories/my"><i class="fa fa-user"></i>
-                    My Stories</a></li>
-                    <li><a href="/auth/logout"><i class="fa fa-sign-out"></i>
-                    Logout</a></li>
-                    {{/if}}
-            </ul>
-
-       </div>  
+                </ul>
+        </div>
     </div>
-</nav> 
+</nav>

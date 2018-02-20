@@ -1,6 +1,7 @@
-<h1>Welcome,{{user.firstName}}...</h1>
-<h5>these are Your Stories</h5><br>
+<h2>Welcome,{{user.firstName}}...</h2>
+
 {{#if stories}}
+<h5>these are Your Stories</h5><br>
  <table class="striped">
      <thead>
          <tr>
@@ -16,11 +17,11 @@
                 <td><a href="/stories/show/{{id}}">{{title}}</a></td>
                 <td>{{formatDate data 'MMMM DD, YYYY'}}</td>
                 <td><span class="dash-status">{{status}}</span></td>
-                <td><a class="btn left-align" href="/stories/edit/{{id}}"><i class="fa fa-pencil"></i> Edit</a>
+                <td><a class="waves-effect waves-light btn tooltipped" data-position="left" data-delay="16" data-tooltip="Edit" href="/stories/edit/{{id}}" ><i class="fa fa-pencil"></i> </a>
                 
                 <form action="/stories/{{id}}?_method=DELETE" method="post" id="delete-form">
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn red "><i class="fa fa-trash-o"></i> Delete</button>
+                <button type="submit" class="btn btn-primary btn-xs red lighten-2 tooltipped" data-position="right" data-delay="16" data-tooltip="Delete"><i class="fa fa-trash-o"></i> </button>
                 </form>
                 </td>
             </tr>
@@ -28,5 +29,5 @@
      </tbody>
  </table>
 {{else}}
-    <p>You have not created any stories yet!</p>
+    <p>Oops...You have not created any stories yet!</p>
 {{/if}}
