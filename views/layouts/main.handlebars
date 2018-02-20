@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" contents="width=device-width,initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+
+        <link rel="shortcut icon" type="image/x-icon" href="././favicon.ico">
+        <link rel="icon" type="image/x-icon" href="././favicon.ico">
+
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" 
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -11,9 +15,13 @@
             rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
              crossorigin="anonymous">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-             <link rel="stylesheet" href="/css/style.css">
-        <title>YourStory</title>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="/css/style.css">
+
+           
+            <title>YourStory</title>
+        
+       
     </head>
     <body id="cf">
         {{> _header}}
@@ -38,12 +46,18 @@
         <script>
             $(document).ready(()=>{
                 $('.button-collapse').sideNav(); 
-                $('select').material_select();
-            });
+            }); 
 
+            //for tooltip in add button
+            $(document).ready(function(){
+            $('.tooltipped').tooltip({delay: 50});
+            });
+        </script>
+           
+        <script>
         //any text area with name body will be replaced by ckeditor
             CKEDITOR.replace('body',{
-                plugins:'wysiwygarea,toolbar,basicstyles,link'
+                plugins:'wysiwygarea,toolbar,basicstyles,link';
             });
         </script>
     </body>
