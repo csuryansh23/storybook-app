@@ -2,16 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" contents="width=device-width,initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" >
       
-      
-        <link rel="shortcut icon" type="image/x-icon" href="././favicon.ico">
-        <link rel="icon" type="image/x-icon" href="././favicon.ico">
-
+ 
             <!-- Compiled and minified CSS -->
             <link rel="stylesheet" 
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+           
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
             rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
              crossorigin="anonymous">
@@ -47,31 +45,28 @@
         <script>
             $(document).ready(()=>{
                 $('select').material_select();
-            }); 
+                $('.tooltipped').tooltip({delay: 30});
 
-             $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrainWidth: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: false, // Displays dropdown below the button
-      alignment: 'left', // Displays dropdown with edge aligned to the left of button
-      stopPropagation: false // Stops event propagation
-    }
-  );
+                $('.dropdown-button').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                constrainWidth: false, // Does not change width of dropdown to that of the activator
+                hover: true, // Activate on hover
+                gutter: 0, // Spacing from edge
+                belowOrigin: false, // Displays dropdown below the button
+                alignment: 'left', // Displays dropdown with edge aligned to the left of button
+                stopPropagation: false // Stops event propagation
+                    }
+                 );
              //any text area with name body will be replaced by ckeditor
-            CKEDITOR.replace('body',{
+                CKEDITOR.replace('body',{
                 plugins:'wysiwygarea,toolbar,basicstyles,link'
-            });
+                });
+
+            }); 
         </script>
 
-        <script> 
-            //for tooltip in add button
-            $(document).ready(function(){
-            $('.tooltipped').tooltip({delay: 50});
-            });
-        </script>
+        
              
     </body>
     </html>   
