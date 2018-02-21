@@ -34,13 +34,13 @@
             <div class="card grey lighten-4">
                 <div class="card-content">
                     <h5>{{commentBody}}</h5>
-                     <div class="chip">
+                    <div class="chip">
                     <img src="{{commentUser.image}}">
-                      <a href="/stories/user/{{commentUser.id}}"> {{commentUser.firstName}} 
-                       {{commentUser.lastName}} </a> 
-                     </div>
-                     <br>
-                     <small>Posted: {{formatDate commentDate 'MMMM DD, YYYY'}}</small>
+                    <a href="/stories/user/{{commentUser.id}}"> {{commentUser.firstName}} 
+                    {{commentUser.lastName}} </a> 
+                    </div>
+                    <br>
+                    <small>Posted: {{formatDate commentDate 'MMMM DD, YYYY'}}</small>
                 </div>
             </div>
             {{/each}}

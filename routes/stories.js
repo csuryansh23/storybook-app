@@ -24,14 +24,14 @@ router.get('/show/:id', (req,res)=>{
         _id: req.params.id
     })
     .populate('user')
-    .populate('commentUser')
+    .populate('comments.commentUser')
     .then(story =>{
         if(story.status == 'public'){
         res.render('stories/show',{
             story: story
         });
     }else{
-        if(req.user){
+        if(req.user){ 
             if(req.user.id == story.user._id){
                 res.render('stories/show',{
                     story: story
