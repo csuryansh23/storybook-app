@@ -27,7 +27,7 @@ module.exports = {
         if (storyUser == loggedUser) {
             if (floating) {
                 return `<a href= "/stories/edit/${storyId}"
-                class="btn-floating halfway-fab cyan" ><i class="fa fa-pencil"></i></a>`;
+                class="btn-floating halfway-fab " ><i class="fa fa-pencil"></i></a>`;
             } else {
                 return `<a href= "/stories/edit/${storyId}">
                 <i class="fa fa-pencil"></i></a>`;
